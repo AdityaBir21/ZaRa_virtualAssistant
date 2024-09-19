@@ -58,9 +58,6 @@ function takeCommand(message){
     else if(message.includes("who are you")){
         speak("I am virtual assistant , created by MR Aditya birholiya ");
     }
-    else if(message.includes("who is som")){
-        speak("aree vo toh motu hai gadha sa dimaag hi nahi hai jisme ");
-    }
     else if(message.includes("open youtube")){
         speak("opening youtube...");
         window.open("https://www.youtube.com/","_blank");
