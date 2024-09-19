@@ -1,0 +1,153 @@
+@font-face {
+    font-family: japan;
+    src: url(./3856NeueMachina.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#logo{
+    height: 60vh;
+    border-radius: 5%;
+    margin-bottom: 30px;
+    
+}
+
+h1{
+    color: #dfe3e2c0;
+    font-weight: 500;
+    font-family: japan;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#name{
+    font-size: 40px;
+    font-weight: 600;
+    color: #BE2B31;
+}
+#va{
+    font-size: 40px;
+    color: #5492B5;
+    font-weight: 600;
+}
+#voice{
+   height: 100px;
+   display: none;
+
+}
+button{
+    font-size: 25px;
+    font-family: japan;
+    font-weight: 500;
+    
+    height: 8%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+    background: linear-gradient(to right,#d33b40ba,#5491b5dd,#dfe3e2ac);
+    border-radius: 25px;
+    border:none;
+    transition: all 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+button:hover{
+    box-shadow: 1px 2px 50px #A51A20;
+}
+
+button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mic{
+    height: 30px;
+}
+
+@media (max-width : 768px){
+    h1{
+        font-size:20px;
+    }
+    #name,#va{
+        font-size:22px;
+    }
+    button{
+        min-width: 200px ;
+    }
+    #mic{
+        height: 25px;
+    }
+    #content{
+        font-size: 20px;
+    }
+    
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+button {
+    animation: pulse 2s infinite;
+}
+
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%; 
+    animation: float 8s infinite; 
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
